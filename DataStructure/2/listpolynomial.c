@@ -70,13 +70,13 @@ int List_polynomial_fprint(FILE *stream, List *list, char *var) {
         }
         return 0;
     } else {
-        if (Term_fprint(stream, node->term, var, "%d", "%s^%u", "-%s^%u", "%d%s^%u") < 0) {
+        if (Term_fprint(stream, node->term, var, "%d", "%d%s", "%s^%u", "-%s^%u", "%d%s^%u") < 0) {
             return 1;
         }
         node = node->next;
     }
     while (node != NULL) {
-        if (Term_fprint(stream, node->term, var, "%+d", "+%s^%u", "-%s^%u", "%+d%s^%u") < 0) {
+        if (Term_fprint(stream, node->term, var, "%+d", "+%d%s", "+%s^%u", "-%s^%u", "%+d%s^%u") < 0) {
             return 1;
         }
         node = node->next;

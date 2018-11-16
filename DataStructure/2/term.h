@@ -11,6 +11,6 @@ typedef struct Term {
 } Term;
 
 Term Term_new(int, unsigned int);
-int Term_fprint(FILE*, Term, char*, char*, char*, char*, char*);
+int Term_fprint(FILE*, Term, char*, char*, char*, char*, char*, char*);
 
 #endif
